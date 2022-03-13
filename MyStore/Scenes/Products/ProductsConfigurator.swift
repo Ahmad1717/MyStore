@@ -33,6 +33,7 @@ final class ProductsConfigurator {
 protocol ProductsInteractorInput {
     func initView()
     func switchTo(index: Int)
+    func search(for key: String)
 }
 
 /// Interactor -> Presenter

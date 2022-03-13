@@ -17,45 +17,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpG-Sd-ptL" customClass="SegmentControl" customModule="MyStore" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="8Br-1B-IVQ"/>
-                                </constraints>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dYX-Nz-gpp">
-                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nyk-44-TrB">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uYJ-bE-YYa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGR-KI-MJK">
+                                        <rect key="frame" x="0.0" y="-50" width="414" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-8j-q6q">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="qbb-dk-4FX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="BFZ-8j-q6q" firstAttribute="leading" secondItem="QGR-KI-MJK" secondAttribute="leading" constant="16" id="Gj3-CB-Grl"/>
+                                            <constraint firstAttribute="bottom" secondItem="BFZ-8j-q6q" secondAttribute="bottom" id="crr-hR-Ddb"/>
+                                            <constraint firstAttribute="trailing" secondItem="BFZ-8j-q6q" secondAttribute="trailing" constant="16" id="rNL-qc-fCZ"/>
+                                            <constraint firstItem="BFZ-8j-q6q" firstAttribute="top" secondItem="QGR-KI-MJK" secondAttribute="top" id="sR5-fr-Sj9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpG-Sd-ptL" customClass="SegmentControl" customModule="MyStore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8Br-1B-IVQ"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dYX-Nz-gpp">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="802"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nyk-44-TrB">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lpG-Sd-ptL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DdX-rI-Q8l"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lpG-Sd-ptL" secondAttribute="trailing" id="EHe-jd-EN1"/>
-                            <constraint firstItem="lpG-Sd-ptL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Th5-jW-K7L"/>
-                            <constraint firstItem="dYX-Nz-gpp" firstAttribute="top" secondItem="lpG-Sd-ptL" secondAttribute="bottom" id="UHP-fl-9kC"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dYX-Nz-gpp" secondAttribute="trailing" id="WRy-YS-T1a"/>
-                            <constraint firstAttribute="bottom" secondItem="dYX-Nz-gpp" secondAttribute="bottom" id="XTw-d3-RPK"/>
-                            <constraint firstItem="dYX-Nz-gpp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nBW-gL-84D"/>
+                            <constraint firstAttribute="bottom" secondItem="uYJ-bE-YYa" secondAttribute="bottom" id="bz0-sD-7uB"/>
+                            <constraint firstItem="uYJ-bE-YYa" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hnj-95-ebG"/>
+                            <constraint firstItem="uYJ-bE-YYa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rVh-9r-sSJ"/>
+                            <constraint firstAttribute="trailing" secondItem="uYJ-bE-YYa" secondAttribute="trailing" id="wH4-IU-Ecx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="dYX-Nz-gpp" id="cjg-oI-nB7"/>
+                        <outlet property="searchTextField" destination="BFZ-8j-q6q" id="3ls-Mz-ysS"/>
+                        <outlet property="searchView" destination="QGR-KI-MJK" id="srp-gv-xTm"/>
                         <outlet property="segmentControl" destination="lpG-Sd-ptL" id="gbo-t9-5fT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="74"/>
+            <point key="canvasLocation" x="31.884057971014496" y="73.660714285714278"/>
         </scene>
     </scenes>
     <resources>

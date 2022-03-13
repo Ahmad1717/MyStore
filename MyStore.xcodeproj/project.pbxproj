@@ -61,6 +61,7 @@
 		EAF607A827DE1F2F008C3711 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF607A727DE1F2F008C3711 /* ProductCollectionViewCell.swift */; };
 		EAF607AA27DE1F40008C3711 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF607A927DE1F40008C3711 /* ProductCollectionViewCell.xib */; };
 		EAF607AC27DE6186008C3711 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF607AB27DE6186008C3711 /* UIImageViewExtensions.swift */; };
+		EAF7DAAA27DE876700BCE219 /* Searchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7DAA927DE876700BCE219 /* Searchable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +129,7 @@
 		EAF607A727DE1F2F008C3711 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAF607A927DE1F40008C3711 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		EAF607AB27DE6186008C3711 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		EAF7DAA927DE876700BCE219 /* Searchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searchable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 			children = (
 				EABA426627DBFFC4009799E1 /* Instantiatable.swift */,
 				EABA426827DC0031009799E1 /* Navigatable.swift */,
+				EAF7DAA927DE876700BCE219 /* Searchable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				EABA425D27DBFD5E009799E1 /* SplashUIModel.swift in Sources */,
 				EABA42A427DC8FC0009799E1 /* Environment.swift in Sources */,
 				EABA426227DBFDED009799E1 /* BaseViewController.swift in Sources */,
+				EAF7DAAA27DE876700BCE219 /* Searchable.swift in Sources */,
 				EABA429F27DC17EF009799E1 /* ServiceWrapper.swift in Sources */,
 				EABA428B27DC0B0C009799E1 /* ActivityIndicator.swift in Sources */,
 				EABA425927DBFD47009799E1 /* SplashInteractor.swift in Sources */,
