@@ -9,4 +9,4 @@ Built using xcode 13.2.1
 4- navigate to project folder
 5- run pod install
 
-incase you don't have cocopods installed in your machine please open the terminal and run **sudo gem install cocoapods**
+in case you don't have cocopods installed in your machine please open the terminal and run **sudo gem install cocoapods**
