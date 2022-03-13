@@ -9,5 +9,5 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 PROTOCOL = https:$()/$()/
-HOST = jsonkeeper.com/b/UKQI
+HOST = jsonkeeper.com
 BASE_URL = $(PROTOCOL)$(HOST)
