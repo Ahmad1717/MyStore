@@ -4,6 +4,8 @@
 # Define the main used Pods
 def main_pods
   pod 'Alamofire',               '~> 5.4.1'
+  pod 'NVActivityIndicatorView',  '~> 4.8.0'
+  pod 'SDWebImage',  '~> 5.12.4'
 end
 
 target 'MyStore' do
