@@ -12,6 +12,8 @@ class ProductsInteractor {
     var output: ProductsPresenterInput?
     var worker: ProductsWorker
     
+    private var brand: Brand = .apple
+    
     init(input: ProductsInput, output: ProductsPresenterInput, worker: ProductsWorker) {
         self.input = input
         self.output = output
@@ -20,9 +22,14 @@ class ProductsInteractor {
 }
 
 extension ProductsInteractor: ProductsInteractorInput {
+    func search(for key: String) {
+        output?.reload(products: key.isEmpty ? input.products : input.products.filter{ $0.passesSearch(for: key)}, for: brand)
+    }
     
     func switchTo(index: Int) {
-        output?.reload(products: input.products, for: Brand.allCases[index])
+        let brand = Brand.allCases[index]
+        self.brand = brand
+        output?.reload(products: input.products, for: brand)
     }
     
     func initView() {

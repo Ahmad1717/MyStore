@@ -97,6 +97,12 @@ class Product: Decodable {
     }
 }
 
+extension Product: Searchable {
+    func passesSearch(for key: String) -> Bool {
+        return (phone ?? "").localizedCaseInsensitiveContains(key) || (announceDate?.stringValue ?? "").localizedCaseInsensitiveContains(key) || (sim ?? "").localizedCaseInsensitiveContains(key) || (resolution ?? "").localizedCaseInsensitiveContains(key) || (audio ?? "").localizedCaseInsensitiveContains(key) || (gps ?? "").localizedCaseInsensitiveContains(key) || (battery ?? "") .localizedCaseInsensitiveContains(key) || (price?.stringValue ?? "") .localizedCaseInsensitiveContains(key)
+    }
+}
+
 enum Brand: String, Decodable, CaseIterable {
     case apple = "Apple"
     case ericsson = "Ericsson"
