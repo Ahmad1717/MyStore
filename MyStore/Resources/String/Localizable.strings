@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  MyStore
+
+  Created by Ahmad Jabri on 13/03/2022.
+  
+*/
+
+// MARK: - Common
+"Common.Welcome" = "Welocme";
+"Common.Error" = "Error";
+"Common.Ok" = "Ok";
+"Common.Start" = "Start";
+
+
+// MARK: Errors
+"Error.JailBreak,Message" = "Your device is Jailbroken and you cannot use the app";
