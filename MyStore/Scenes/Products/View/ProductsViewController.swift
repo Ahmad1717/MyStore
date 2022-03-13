@@ -19,6 +19,8 @@ class ProductsViewController: BaseViewController {
     
     @IBOutlet private weak var segmentControl: SegmentControl?
     @IBOutlet private weak var collectionView: UICollectionView?
+    @IBOutlet private weak var searchView: UIView?
+    @IBOutlet private weak var searchTextField: UITextField?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -36,6 +38,7 @@ private extension ProductsViewController {
         configureCollectionView()
         configureNavigationBar()
         segmentControl?.delegate = self
+        searchTextField?.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         output?.initView()
     }
     
@@ -83,7 +86,12 @@ private extension ProductsViewController {
     }
     
     @objc func didTapSearch() {
+        searchView?.isHidden.toggle()
+    }
+    
+    @objc func editingChanged() {
         
+        output?.search(for: searchTextField?.text ?? "")
     }
 }
 
